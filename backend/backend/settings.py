@@ -10,7 +10,7 @@ SECRET_KEY = (
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '123.123.123.123']
+ALLOWED_HOSTS = ['89.169.166.136', 'localhost', '127.0.0.1', 'https://myhosttestrus.ddns.net/']
 
 
 # Application definition
