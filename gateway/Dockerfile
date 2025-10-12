@@ -1,2 +1,11 @@
 FROM nginx:1.22.1
 COPY nginx.conf /etc/nginx/templates/default.conf.template
+
+
+
+
+
+
+-----BEGIN OPENSSH PRIVATE KEY-----
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDPlvgRTmBDPRiwdlFyL4DKZOKqi1n93Nel1sOYbV0NPo3ilBb5mAApDefjQ+zNLfg3ntB0sKsq27KVsEByilXdQAei/DISTwB2Z17TSl3WQo5Dq/a7s6/xRmaJ2Kw7zzj1goaKHPnye4fzzhqVEjVb799VF8vh/fa1RjJ8HUs1h6BFe8WHP+kLGxeLMH7Tj+7ynV01wE0I+6rBw5P9jw4qmuYc61ohuVAi/5N3LvmU0etovBbW1v3PEnPU0mk3pl6bOs0NQY4xg7L5feOWdQ+oHP8dIFB5i5ZphcALFRETKYotxmRU8jW4JRp8VD3o32WUZQIeOaQTZfooa6pDIT7ZNrwvt1WKtczsWXVzsXoRkGrTux2GyoYS3iyVVsYo7XHqPShdKvX/ngmeW+RndOFZGr7aAq61sEQQthaPtMDYdQIbVICAXf372PUJFmLg3BCZdbi6hmnI5ov5meXWLaG6/j0aur4LScocA5Shg02MzYZszg7iWt/dexzZkUpW2bE= yc-user@epdn77hbevcubj67p8ol
+-----END OPENSSH PRIVATE KEY-----
