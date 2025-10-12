@@ -10,21 +10,29 @@ services:
     env_file: .env
     volumes:
       - pg_data_production:/var/lib/postgresql/data
+
   backend:
-    image: zemort/taski_backend
+    image: zemort/taski_backend:latest
     env_file: .env
+    depends_on:
+      - db
     volumes:
       - static_volume:/backend_static
+
   frontend:
-    image: zemort/taski_frontend
+    image: zemort/taski_frontend:latest
     env_file: .env
     command: cp -r /app/build/. /frontend_static/
     volumes:
       - static_volume:/frontend_static
+
   gateway:
-    image: zemort/taski_gateway
+    image: zemort/taski_gateway:latest
     env_file: .env
-    volumes:
-      - static_volume:/staticfiles/
+    depends_on:
+      - backend
+      - frontend
     ports:
-      - 8000:80
+      - "8000:80"
+    volumes:
+      - static_volume:/staticfiles
