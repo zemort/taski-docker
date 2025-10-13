@@ -1,3 +1,4 @@
+# Версия docker-compose
 version: '3'
 
 volumes:
@@ -10,29 +11,21 @@ services:
     env_file: .env
     volumes:
       - pg_data_production:/var/lib/postgresql/data
-
   backend:
-    image: zemort/taski_backend:latest
+    image: zemort/taski_backend
     env_file: .env
-    depends_on:
-      - db
     volumes:
       - static_volume:/backend_static
-
   frontend:
-    image: zemort/taski_frontend:latest
+    image: zemort/taski_frontend
     env_file: .env
     command: cp -r /app/build/. /frontend_static/
     volumes:
       - static_volume:/frontend_static
-
   gateway:
-    image: zemort/taski_gateway:latest
+    image: zemort/taski_gateway
     env_file: .env
-    depends_on:
-      - backend
-      - frontend
-    ports:
-      - "8000:80"
     volumes:
-      - static_volume:/staticfiles
+      - static_volume:/staticfiles/
+    ports:
+      - 8000:80 
