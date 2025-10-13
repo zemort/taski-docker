@@ -10,7 +10,7 @@ SECRET_KEY = (
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['89.169.166.136', 'localhost', '127.0.0.1', 'https://myhosttestrus.ddns.net/']
+ALLOWED_HOSTS = ['89.169.166.136', 'localhost', '127.0.0.1', 'myhosttestrus.ddns.net']
 
 
 # Application definition
@@ -117,7 +117,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = BASE_DIR / 'collected_static'
+STATIC_ROOT = '/backend_static'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
