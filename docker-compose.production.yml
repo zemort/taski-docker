@@ -1,6 +1,3 @@
-# Версия docker-compose
-version: '3'
-
 volumes:
   pg_data_production:
   static_volume:
@@ -27,5 +24,7 @@ services:
     env_file: .env
     volumes:
       - static_volume:/staticfiles/
+    depends_on:
+      - backend
     ports:
-      - 8000:80 
+      - 8000:80
